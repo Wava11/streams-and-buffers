@@ -5,7 +5,11 @@ export const createCountingReadableStream = (amount: number) => {
     function* yieldUntilAmount() {
         while (counter < amount) {
             counter++;
-            yield counter.toString();
+            yield counter;
+            const buffer = Buffer.alloc(1);
+            buffer[0] = counter;
+            yield buffer;
+            // yield counter.toString();
         }
     }
     return Stream.Readable.from(yieldUntilAmount());

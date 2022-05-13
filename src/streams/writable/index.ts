@@ -1,6 +1,6 @@
 import Stream from 'stream';
-
 export class EchoStream extends Stream.Writable {
+    //TODO what is `callback`
     _write(chunk: any, encoding: BufferEncoding, callback: (error?: Error | null) => void): void {
         console.log(chunk.toString());
         callback();

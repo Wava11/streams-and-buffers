@@ -8,7 +8,7 @@ import { createConsumer, } from './streams/backpressure/consumer';
 import { startServer, } from './streams/backpressure/producer';
 import { createCountingReadableStream } from './streams/readable';
 
-startServer(2222)
+
 // startServer(2222)
 // emitterExample();
 // pausedStreamExample();

@@ -5,11 +5,12 @@ import flowingStreamExample from './streams/readable/flowing';
 import writableStreamExample from './streams/writable';
 import pipingExample from './streams/piping';
 import { createConsumer, } from './streams/backpressure/consumer';
-import { startServer, } from './streams/backpressure/producer';
+import { startServer } from './streams/backpressure/producer';
 import { createCountingReadableStream } from './streams/readable';
+import { Socket } from 'net';
 
-
-// startServer(2222)
+startServer(2222);
+// bufferExample();
 // emitterExample();
 // pausedStreamExample();
 // flowingStreamExample();
